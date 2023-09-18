@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,100&family=Outfit:wght@400;700&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,700&family=Mont*{serrat:ital,wght@0,500;0,700;1,100&family=Outfit:wght@400;700&family=Space+Grotesk:wght@500&display=swap');
 /*----------Custom Colors-------------*/
 
 :root {
@@ -178,9 +178,6 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-    * {
-      overflow-x: hidden;
-      }
   }
 
 /*--------------Sizing Up Credit Card Images and Text----------------------------*/
@@ -308,7 +305,7 @@
     gap:1rem;
     padding: 0rem 2rem 2rem 2rem;
     display: none;
-    margin-top: 3rem;
+    margin-top: 5.5rem;
   }
   .Form__Submitted__Notification h1{
     font-weight: var(--fw-regular);

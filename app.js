@@ -158,6 +158,7 @@ function resetCardVisualization(){
     cardCVC.innerText  = "000";
 }
 
+
 numberInp.addEventListener("keyup", setCardNumber);
 cardNameInp.addEventListener("keyup", setCardName);
 cardMonthInp.addEventListener("keyup", setCardMonth);
