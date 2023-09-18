@@ -24,8 +24,6 @@
   */
   * {
     margin: 0;
-    overflow-x:hidden;
-
   }
   /*
     Typographic tweaks!
@@ -42,8 +40,7 @@
 
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    overflow-x:hidden;
-  }
+    overflow-x: hidden;
   /*
     5. Improve media defaults
   */
@@ -91,6 +88,7 @@
     display: grid;
     grid-template-rows:1fr 2fr ;
     --form-element-border-radius: 0.4rem;  
+
   }
   @media(min-width: 750px)
   { 
@@ -306,6 +304,7 @@
     gap:1rem;
     padding: 0rem 2rem 2rem 2rem;
     display: none;
+    margin-top: 3rem;
   }
   .Form__Submitted__Notification h1{
     font-weight: var(--fw-regular);
