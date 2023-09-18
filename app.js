@@ -29,19 +29,19 @@ const FormSubmittedNotification = document.getElementById("FormSubmittedNotifica
 //-------------Assign Inputs to Credit Card Visualization------------------//
 
 function setCardNumber(e) {
-    cardNumber.innerText = format(e.target.value);
+    cardNumber.innerText = format(numberInp.value);
 }
 function setCardName(e) {
-    cardName.innerText = e.target.value;
+    cardName.innerText = cardNameInp.value;
 }
 function setCardMonth(e) {
-    cardMonth.innerText = e.target.value;
+    cardMonth.innerText = cardMonthInp.value;
 }
 function setCardYear(e) {
-    cardYear.innerText = e.target.value;
+    cardYear.innerText = cardYearInp.value;
 }
 function setCardCVC(e) {
-    cardCVC.innerText = e.target.value;
+    cardCVC.innerText = cardCVCInp.value;
 }
 function format(s) {
     return s.toString().replace(/\d{4}(?=.)/g, '$& ');
