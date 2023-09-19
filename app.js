@@ -140,6 +140,7 @@ function RemoveErrorMsg(element)
 function FormCheckPassed(){
     Form.style.display = "none";
     FormSubmittedNotification.style.display = "flex";
+
     resetCardVisualization();
 }
 
@@ -157,15 +158,40 @@ function resetCardVisualization(){
     cardYear.innerText  = "00";
     cardCVC.innerText  = "000";
 }
-/*
+
 //Detect Autocompletion and refresh Card Visualization
 document.addEventListener('onautocomplete', function(e) {
-    cardNumber.innerText = numberInp.value;
+
+    switch(e.target){
+        case cardNameInp:
+            cardName.innerText = cardNameInp.value;
+            break;
+
+        case numberInp:
+            cardNumber.innerText = numberInp.value;
+            break;
+
+        case cardCVCInp:
+            cardCVC.innerText = cardCVCInp.value;
+            break;
+
+        case cardMonthInp:
+            cardMonth.innerText = cardMonthInp.value;
+            break;
+            
+        case cardYearInp:
+            cardYear.innerText = cardYearInp.value;
+            break;
+    }
+    
+
+    e.target.innerText = e.value;
+  /*  cardNumber.innerText = numberInp.value;
     cardName.innerText = cardNameInp.value;
     cardCVC.innerText = cardCVCInp.value;
     cardMonth.innerText = cardMonthInp.value;
-    cardYear.innerText =cardYearInp.value;
-})*/
+    cardYear.innerText =cardYearInp.value;*/
+})
 
 numberInp.addEventListener("keyup", setCardNumber);
 cardNameInp.addEventListener("keyup", setCardName);
