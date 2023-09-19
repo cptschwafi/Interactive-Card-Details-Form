@@ -157,14 +157,15 @@ function resetCardVisualization(){
     cardYear.innerText  = "00";
     cardCVC.innerText  = "000";
 }
-
+/*
 //Detect Autocompletion and refresh Card Visualization
 document.addEventListener('onautocomplete', function(e) {
     cardNumber.innerText = numberInp.value;
     cardName.innerText = cardNameInp.value;
-})
-
-
+    cardCVC.innerText = cardCVCInp.value;
+    cardMonth.innerText = cardMonthInp.value;
+    cardYear.innerText =cardYearInp.value;
+})*/
 
 numberInp.addEventListener("keyup", setCardNumber);
 cardNameInp.addEventListener("keyup", setCardName);
