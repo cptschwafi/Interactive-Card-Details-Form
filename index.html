@@ -16,97 +16,99 @@
   </style>
 </head>
 <body>
-  <div class="Main__Page">
-    <div class="Credit__Cards">
-      <div class="Credit__Card__Container">
-        <div class="Back__Card">
-          <img class="Back__Card__Image" src="images/bg-card-back.png" alt="">
-          <div class="Back__Card__Content Small__Text">
-            <p id="BackCardCVC">000</p>
-          </div>
-        </div>
-        <div class="Front__Card">
-          <img class="Front__Card__Image"src="images/bg-card-front.png" alt="">
-          <div class="Front__Card__Content">
-            <div class="FLex__Box">
-              <span class="Circle1"></span>
-              <span class="Circle2"></span>
+  <main>
+    <div class="Main__Page">
+      <div class="Credit__Cards">
+        <div class="Credit__Card__Container">
+          <div class="Back__Card">
+            <img class="Back__Card__Image" src="images/bg-card-back.png" alt="">
+            <div class="Back__Card__Content Small__Text">
+              <p id="BackCardCVC">000</p>
             </div>
-            
-            <h4 id="FrontCardNumber">0000 0000 0000 0000</h1>
-            <div class="Customer__Name Small__Text">
-              <p id="FrontCardName">Jane Appleseed</p>
-              <span>
-                <span id="FrontCardMonth">00</span>
-                <span>/</span> 
-                <span id="FrontCardYear">00</span>
-              </span>
+          </div>
+          <div class="Front__Card">
+            <img class="Front__Card__Image"src="images/bg-card-front.png" alt="">
+            <div class="Front__Card__Content">
+              <div class="FLex__Box">
+                <span class="Circle1"></span>
+                <span class="Circle2"></span>
+              </div>
+              
+              <h4 id="FrontCardNumber">0000 0000 0000 0000</h1>
+              <div class="Customer__Name Small__Text">
+                <p id="FrontCardName">Jane Appleseed</p>
+                <span>
+                  <span id="FrontCardMonth">00</span>
+                  <span>/</span> 
+                  <span id="FrontCardYear">00</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Form__Container">
-      <form class="Input__Form" id="InputForm" autocomplete="on" action="">
-        <div class="Grid__Full__Row">
-          <label for="cardholderName">Cardholder Name</label>
-          <input type="text" name="cardholderName" id="cardNameInp" placeholder="e.g. Jane Appleseed"
-          oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="29"
-          required>
-          <p id="CardNameInpError" class="Error__Tag">name missing</p>
-        </div>
-        
-        <div class="Grid__Full__Row">
-          <label for="cardNumber">Card Number</label>
-          <input type="number" id="cardNumberInp" placeholder="e.g. 1234 5678 9123 0000" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="16"
-          minlength="16"
-          required >
-          <p id="CardNumberInpError" class="Error__Tag">card number must contain 16 digits</p>
-        </div>
-        
-        <div class="Exp__Date">
-          <label for="card_date">Exp. Date (MM/YY)</label>
-          <div class="Exp__Date__Inputs">
-            <input type="number" name="month" id="monthInp" placeholder="MM"
+      <div class="Form__Container">
+        <form class="Input__Form" id="InputForm" autocomplete="on" action="">
+          <div class="Grid__Full__Row">
+            <label for="cardholderName">Cardholder Name</label>
+            <input type="text" name="cardholderName" id="cardNameInp" placeholder="e.g. Jane Appleseed"
             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="2"
-            minlength="2"
+            maxlength="29"
             required>
-            <input type="number" name="year" id="yearInp" placeholder="YY"
-            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="2"
-            minlength="2"
-            required>
+            <p id="CardNameInpError" class="Error__Tag">name missing</p>
           </div>
-          <p id="CardDateInpError" class="Error__Tag">exp. date incorrect</p>
+          
+          <div class="Grid__Full__Row">
+            <label for="cardNumber">Card Number</label>
+            <input type="number" id="cardNumberInp" placeholder="e.g. 1234 5678 9123 0000" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="16"
+            minlength="16"
+            required >
+            <p id="CardNumberInpError" class="Error__Tag">card number must contain 16 digits</p>
+          </div>
+          
+          <div class="Exp__Date">
+            <label for="card_date">Exp. Date (MM/YY)</label>
+            <div class="Exp__Date__Inputs">
+              <input type="number" name="month" id="monthInp" placeholder="MM"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="2"
+              minlength="2"
+              required>
+              <input type="number" name="year" id="yearInp" placeholder="YY"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="2"
+              minlength="2"
+              required>
+            </div>
+            <p id="CardDateInpError" class="Error__Tag">exp. date incorrect</p>
+          </div>
+
+          <div class="CVC">
+            <label>CVC</label>
+          <input type="number" name="CVC" id="CVCInp" placeholder="e.g. 123"  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type = "number"
+          maxlength = "3" required>
+          <p id="CVCInpError" class="Error__Tag">CVC incorrect</p>
+          </div>
+
+        <button class="Confirm__Btn" id="Submit__Btn" type="submit">Confirm </button>
+
+        </form>
+        <div class="Form__Submitted__Notification" id="FormSubmittedNotification">
+          <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="Confirm__Btn" id="Confirm__Btn">Continue</button>
         </div>
-
-        <div class="CVC">
-          <label>CVC</label>
-        <input type="number" name="CVC" id="CVCInp" placeholder="e.g. 123"  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-        type = "number"
-        maxlength = "3" required>
-        <p id="CVCInpError" class="Error__Tag">CVC incorrect</p>
-        </div>
-
-      <button class="Confirm__Btn" id="Submit__Btn" type="submit">Confirm </button>
-
-      </form>
-      <div class="Form__Submitted__Notification" id="FormSubmittedNotification">
-        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
-        <h1>Thank you!</h1>
-        <p>We've added your card details</p>
-        <button class="Confirm__Btn" id="Confirm__Btn">Continue</button>
       </div>
+      <!-- Completed state start -->
+
+      <!-- JS library for detecting autocompletion -->
+      <script src="https://unpkg.com/detect-autofill/dist/detect-autofill.js"></script>
+
+      <script src="app.js"></script>
     </div>
-    <!-- Completed state start -->
-
-    <!-- JS library for detecting autocompletion -->
-    <script src="https://unpkg.com/detect-autofill/dist/detect-autofill.js"></script>
-
-    <script src="app.js"></script>
-  </div> 
+  </main> 
 </body>
 </html>
