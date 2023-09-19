@@ -24,6 +24,7 @@
   */
   * {
     margin: 0;
+    overflow-x: hidden;
   }
   /*
     Typographic tweaks!
@@ -40,7 +41,7 @@
 
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    overflow-x: hidden;
+    overflow-y: auto;
   }
   /*
     5. Improve media defaults
@@ -114,6 +115,7 @@
     width: 17.5rem;
     height: 10rem;
     z-index: 2;
+    overflow: hidden;
   }
   .Circle1{
     height: 30px;
@@ -158,6 +160,7 @@
     height: 10rem;
     top:2rem;
     margin: 0rem 0rem 0rem 5rem;
+    overflow: hidden;
   }
  .Back__Card__Content{
   position: absolute;
