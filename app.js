@@ -158,6 +158,13 @@ function resetCardVisualization(){
     cardCVC.innerText  = "000";
 }
 
+//Detect Autocompletion and refresh Card Visualization
+document.addEventListener('onautocomplete', function(e) {
+    cardNumber.innerText = numberInp.value;
+    cardName.innerText = cardNameInp.value;
+})
+
+
 
 numberInp.addEventListener("keyup", setCardNumber);
 cardNameInp.addEventListener("keyup", setCardName);
