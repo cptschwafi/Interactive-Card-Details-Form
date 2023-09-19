@@ -1,4 +1,4 @@
-This was the 2nd challenge i took on from frontendmentor.io
+This was the 3rd challenge i took on from frontendmentor.io
 
 Contains:
 
