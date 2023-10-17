@@ -6,4 +6,4 @@ Contains:
   
 -  Javascript logic for credit card data visualization and form validation
 
-- Link to challenge: https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw
+- To check out the result click here: https://cptschwafi.github.io/Interactive-Card-Details-Form/
